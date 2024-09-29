@@ -1,13 +1,107 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, hsl(182, 70%, 30%), hsl(288, 80%, 20%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  min-width: 500px;
+  max-width: 540px;
+  background-color: hsla(0, 0%, 100%, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+h1 {
+  color: hsl(217, 100%, 20%);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom: 2px solid #000;
+}
+
+.add {
+  background-color: hsl(6, 100%, 64%);
+  color: white;
+  padding: 12px 25px;
+  cursor: pointer;
+  border: none;
+  border-radius: 40px;
+  transition: background-color 0.3s;
+}
+
+.add:hover {
+  background-color: hsl(6, 100%, 70%);
+}
+
+.add:active {
+  background-color: hsl(6, 100%, 74%);
+}
+
+.list {
+  margin-top: 20px;
+}
+
+.todo {
+  position: relative;
+  margin-top: 1rem;
+  background-color: hsla(0, 0%, 100%, 0.358);
+  color: hsl(217, 100%, 20%); 
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  transition: background 0.3s, transform 0.2s;
+}
+
+.todo:hover {
+  background-color: hsla(0, 0%, 100%, 0.9); 
+  transform: scale(1.02);
+}
+
+.icons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 20px;
+  color: hsl(6, 100%, 64%); 
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: hsl(182, 70%, 30%); 
 }
